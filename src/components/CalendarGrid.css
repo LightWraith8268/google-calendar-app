@@ -1,0 +1,99 @@
+.calendar-grid {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-grid h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.weekday-header {
+  text-align: center;
+  font-weight: 600;
+  padding: 8px 4px;
+  color: #666;
+  font-size: 12px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  min-height: 500px;
+}
+
+.day {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 8px 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 80px;
+  background: #fafafa;
+}
+
+.day:hover {
+  background: #f0f0f0;
+  border-color: #ddd;
+}
+
+.day.empty {
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+.day.today {
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.day-number {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.day-events {
+  flex: 1;
+  overflow-y: auto;
+  font-size: 11px;
+}
+
+.event-chip {
+  background: #4285f4;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 2px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.event-chip:hover {
+  background: #3367d6;
+}
+
+.event-more {
+  font-size: 10px;
+  color: #666;
+  padding: 2px 4px;
+}
